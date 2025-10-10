@@ -1,2 +1,2 @@
 # Magic-Square-Generator
-Implementation of a Magic Square Generator using Evolutionari Algorithms
+Implementation of a Magic Square Generator using Evolutionary Algorithms
