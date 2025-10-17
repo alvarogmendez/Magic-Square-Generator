@@ -1,4 +1,4 @@
-# Magic Square Generator Notebook
+# Magic Square Generator
 
 ### Author: Álvaro González Méndez
 
@@ -308,3 +308,37 @@ Analogously, another four-number swap is performed to correct the inverse diagon
 $$(a_{i,n-i+1}+a_{n-j+1,j})-(a_{ij}+a_{n-j+1,n-i+1}) = \sum_{k=1}^{n}a_{n-k+1,k}-c$$
 
 
+## Conclusions
+Following the recipe written in 2003 of T. Xie [1] we did not get results as good as the author but, indeed, we ended up with a more than suficient implementation of a Magic Square Generator.
+
+We tried to generate squares of order 30 succesfully under 20 minutes which might look very time wasting, but comparing to a brute force seach it is infinitly more efficient. There is a total of 900! posible combinations of squares of this size.
+
+$${900! ≈ 1.45×10^{2274}}$$
+
+To put this number into perspective, let us make an exceedingly optimistic assumption about computational speed. Let us asume a hypothetical supercomputer capable of evaluating one Spanish Billion (U.S. trillion) combinations per second. The total time required in years would be calculated using the following operation:
+
+$$ \text{Time (years)} = \frac{1.45 \times 10^{2274} \text{ combinations}}{10^{12} \text{ combinations/sec} \times 31,536,000 \text{ sec/year}} \approx 4.6 \times 10^{2254} \text{ years} $$
+
+For context, the estimated age of the universe is approximately 13800 million years.
+
+$$ \text{Age of Universe (years)} = 1.38 \times 10^{10} $$
+
+Therefore, the time necessary to find a 30x30 magic square by brute force is orders of magnitude greater than the age of the universe, rendering such an approach computationally infeasible.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Meter tabla to guapa aqui.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+However in the paper the author mentions he es able to create squares of orther 100. No doubting in their research, the important points that I coud have done better and could be object to improve are:
+
+* Make an implementation in a not interpretated lenguage such as C or Java instead of Python.
+
+* Search for errors in my implementation.
+
+* Optimize the code for more efficent computing.
+
+* Use of concurrent methods.
+
+* Use of prepaired libraries such as *DEAP*, *PyGAD*, and *EvoPy*.
+
+* Even further than comparing to T. Xie et al, search of a diferent metaheuristic that can solve the problem more efficiently.
